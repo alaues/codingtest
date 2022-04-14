@@ -4,7 +4,10 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
+use App\Providers\ServiceProvider;
 use Symfony\Component\Console\Application;
+
+ServiceProvider::boot();
 
 $application = new Application();
 

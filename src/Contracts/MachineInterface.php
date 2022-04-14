@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Machine;
+namespace App\Contracts;
 
 /**
  * Interface CigaretteMachine
@@ -13,5 +13,10 @@ interface MachineInterface
      *
      * @return PurchasedItemInterface
      */
-    public function execute(PurchaseTransactionInterface $purchaseTransaction);
+    public function execute(PurchaseTransactionInterface $purchaseTransaction): PurchasedItemInterface;
+
+    /**
+     * @return float|null
+     */
+    public function getItemPrice(): ?float;
 }
